@@ -47,6 +47,7 @@ def sayfaKontrol(driver):
                 mail = Mail.Mail("mail@hotmail.com","Yer boşaldı "+sayi.text)
                 mail.sendMail()
                 print (sayi.text)
+                exit()
             else:
                 print("Yer Yok")
             driver.quit()
