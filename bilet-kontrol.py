@@ -44,12 +44,10 @@ def sayfaKontrol(driver):
         if elem != "":
             sayi = driver.find_element_by_css_selector('#mainTabView\:gidisSeferTablosu\:1\:j_idt108\:0\:somVagonTipiGidis1_label')
             if sayi.text[22] != '0':
-                mail = Mail.Mail("mail@hotmail.com","Yer boşaldı")
+                mail = Mail.Mail("mail@hotmail.com","Yer boşaldı "+sayi.text)
                 mail.sendMail()
                 print (sayi.text)
             else:
-                mail = Mail.Mail("mail@hotmail.com", "Yer Yok")
-                mail.sendMail()
                 print("Yer Yok")
             driver.quit()
     except TimeoutException as ex:
