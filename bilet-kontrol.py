@@ -57,3 +57,4 @@ def sayfaKontrol(driver):
 if __name__=="__main__":
     while True:
         driverSetting()
+        time.sleep(300)
