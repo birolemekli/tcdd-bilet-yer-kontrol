@@ -1,5 +1,9 @@
 # TCDD Bilet Kontrol
 
+
+## Kod Eğitim amaçlı geliştirilmiştir...
+
+
 ### Paket Kurulumu
 
 `$ pip install -r requirements.txt`
