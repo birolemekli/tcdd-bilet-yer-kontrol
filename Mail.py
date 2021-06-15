@@ -6,7 +6,7 @@ import smtplib
 
 class Mail:
     def __init__(self,mail_to,subject):
-        self.__smtp_host="host"
+        self.__smtp_host="host" #Hotmail için örneğin: smtp-mail.outlook.com girilmelidir.
         self.__mail_from="mail"
         self.__mail_from_password="password"
         self.mail_to=mail_to

@@ -18,12 +18,12 @@ class Control:
 
     def sayfaKontrol(self):
         try:
-            elem = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='mainTabView:gidisSeferTablosu:1:j_idt108:0:somVagonTipiGidis1_label']")))
+            elem = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//*[@id='mainTabView:gidisSeferTablosu:1:j_idt109:0:somVagonTipiGidis1_label']")))
             if elem != "":
                 for row in range(1, 15):
                     try:
                         if self.time == self.driver.find_element_by_xpath('/html/body/div[3]/div[2]/div/div/div/div/form/div[1]/div/div[1]/div/div/div/div[1]/div/div/div/table/tbody/tr[{0}]/td[1]/span'.format(row)).text:
-                            message=self.driver.find_element_by_xpath('//*[@id="mainTabView:gidisSeferTablosu:{0}:j_idt108:0:somVagonTipiGidis1_label"]'.format(row - 1)).text
+                            message=self.driver.find_element_by_xpath('//*[@id="mainTabView:gidisSeferTablosu:{0}:j_idt109:0:somVagonTipiGidis1_label"]'.format(row - 1)).text
                             if message[22] != '0':
                                 Mail.Mail(self.email, message).sendMail()
                                 print(message)

@@ -25,11 +25,11 @@ if __name__=="__main__":
     if str(sys.argv[1])=="--h":
         Help.Help()
     else:
-        first_location = str(sys.argv[1])
-        last_location = str(sys.argv[2])
-        date = str(sys.argv[3])
-        timee = str(sys.argv[4])
-        email= str(sys.argv[5])
+        first_location = input("Biniş yerinizi giriniz. Ör:Ankara Gar\n")
+        last_location = input("İniş yerinizi giriniz. Ör:İstanbul(Pendik)\n")
+        date = input("Gideceğiniz günü giriniz. Ör:18.07.2021\n")
+        timee = input("Saati giriniz. Ör:15:00\n")
+        email= str(sys.argv[1])
         while True:
             driver=driverSetting()
             driverGet(driver)
