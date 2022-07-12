@@ -14,9 +14,8 @@
 
 Uygulama TCDD sitesine özel tasarlanmıştır.
 
-Sizin uygulamayı çalıştırırken vereceğiniz argumentler doğrultusunda çalışmaktadır. 5dk aralıklarla verdiğiniz güzergah üzerinde ilgili saatteki seferi kontrol eder.
+Sizin uygulamayı çalıştırırken vereceğiniz argumentler doğrultusunda çalışmaktadır. 30 saniye aralıklarla verdiğiniz güzergah üzerinde ilgili saatteki seferi kontrol eder.
 
 ```sh
-$ python3 main.py email
-$ python3 main.py test@hotmail.com
+$ python3 main.py 
 ```
