@@ -6,13 +6,13 @@ import smtplib
 
 class Mail:
     def __init__(self,mail_to,subject):
-        self.__smtp_host="host" #Hotmail için örneğin: smtp-mail.outlook.com girilmelidir.
-        self.__mail_from="mail"
-        self.__mail_from_password="password"
+        self.__smtp_host="smtp.x.com" # ie : smtp.gmail.com
+        self.__mail_from="your mail" #ie : youremail@gmail.com
+        self.__mail_from_password="your password" # ie : 123456
         self.mail_to=mail_to
         self.subject=subject
 
-    def sendMail(self):
+    def sendMail(self,timee):
         try:
             msg = MIMEMultipart()
             password = self.__mail_from_password
@@ -20,12 +20,14 @@ class Mail:
             msg['To'] = self.mail_to
             msg['Subject'] = self.subject 
             msg.attach(MIMEText(self.subject))
+            msg.attach(MIMEText(timee))
             server = smtplib.SMTP(self.__smtp_host)
             server.starttls()
             server.login(msg['From'], password)
             server.sendmail(msg['From'], msg["To"].split(","), msg.as_string())
             print ('Mail gonderildi...')
-        except:
+        except Exception as e:
+            print(e)
             print ('Mail göndermede bir sorun meydana geldi')
 
     def getHost(self):
