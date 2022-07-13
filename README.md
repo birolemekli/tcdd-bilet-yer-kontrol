@@ -19,3 +19,6 @@ Sizin uygulamayı çalıştırırken vereceğiniz argumentler doğrultusunda ça
 ```sh
 $ python3 main.py 
 ```
+
+### Örnek Kullanım
+
