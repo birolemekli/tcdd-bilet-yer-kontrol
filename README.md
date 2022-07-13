@@ -22,6 +22,6 @@ $ python3 main.py
 
 ### Örnek Kullanım
 
-![title](Images/test.png)
+![title](images/test.png)
 
-![title](Images/mail.png)
+![title](images/mail.png)
